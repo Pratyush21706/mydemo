@@ -1,0 +1,298 @@
+/* SOME DEFAULTS */
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto";
+  overflow-x: hidden;
+  animation-name: fade-in;
+  animation-duration: 1s;
+}
+
+button,
+div,
+input {
+  outline: 0;
+  border: none;
+  background: none;
+}
+
+div::-webkit-scrollbar {
+  display: none;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin-bottom: 0px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  transform: flip();
+}
+
+.bold {
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+/* Introductionm page starts  */
+
+.introduction-page {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  position: relative;
+}
+
+.body-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 80vh;
+  margin-top: 20vh;
+  width: 60vw;
+  filter: grayscale(100%);
+  margin-right: -5vw;
+  transition: 0.5s;
+  animation-name: grayscale;
+  animation-duration: 2s;
+}
+
+.body-image:hover {
+  filter: grayscale(0%);
+}
+
+.body-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* background: red; */
+  margin-left: 6vw;
+  margin-top: 30vh;
+}
+
+.para {
+  font-size: 2.5vw;
+  color: #fea097;
+  /* font-weight: 700; */
+  margin-left: 10px;
+}
+
+.main-name {
+  font-size: 10vw;
+  background: linear-gradient(90deg, #fecb9b 0%, rgba(254, 203, 155, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: -1.1vh;
+  transition: 0.5s;
+  width: fit-content;
+  animation-name: letter-space;
+  animation-duration: 2s;
+}
+
+.main-name:hover {
+  letter-spacing: 2vw;
+}
+
+.get-in-touch {
+  border: 1px solid #fea097;
+  width: 10vw;
+  padding: 1vw;
+  color: rgba(254, 203, 155, 1);
+  border-radius: 10px;
+  margin-left: 10px;
+  font-size: 1vw;
+  transition: 0.5s;
+}
+
+.get-in-touch:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(254, 203, 155, 1) 0%,
+    rgba(254, 203, 155, 1) 100%
+  );
+  color: #000000;
+}
+
+/* About Page */
+
+.body-image-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 40vw;
+}
+
+.body-content-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: +45;
+  margin-right: 6vw;
+  margin-top: 20vh;
+  width: 50vw;
+}
+
+.body-subtitle {
+  font-size: 3vw;
+  color: #fea097;
+}
+
+.abt-scroll {
+  height: 50vh;
+  /* background: red; */
+  overflow-x: scroll;
+  margin-top: 2vh;
+}
+
+.body-data {
+  color: white;
+  font-size: 1.5vw;
+  width: 90%;
+}
+
+/* footer */
+.footer {
+  background: #050505;
+  margin-top: -1vh;
+  padding: 2vh;
+}
+
+.footer p,
+.social-pallet {
+  display: inline-block;
+}
+
+.footer p {
+  color: #fecb9b;
+  font-size: 5vw;
+}
+
+.social-pallet {
+  margin-left: 30vw;
+}
+.social {
+  padding: 2vw;
+  font-size: 6vw;
+  color: #fea097;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 548px) {
+  .body-image {
+    top: 0;
+    width: 150vw;
+    margin-right: -30vw;
+  }
+  .body-content {
+    background-color: #fea097;
+    padding-left: 10px;
+  }
+
+  .main-name {
+    font-size: 11vw;
+    background: linear-gradient(90deg, #000000 0%, #000000 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .get-in-touch {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 65vh;
+    font-size: 5vw;
+    padding: 1vw;
+    display: none;
+    /* margin-right: 40vw; */
+    z-index: 100;
+    width: 30vw;
+    background: dodgerblue;
+    border: 0px;
+    color: white;
+    height: 5vh;
+    border-radius: 0px;
+  }
+
+  .para {
+    margin-left: 0px;
+    opacity: 0;
+  }
+
+  /* About Page small */
+
+  .body-image-2 {
+    opacity: 0.1;
+    width: 100vw;
+  }
+
+  .body-content-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: +45;
+    margin-top: 17vh;
+    width: 100vw;
+    /* background: rgba(0, 0, 0, 0.664); */
+    margin-right: -10vw;
+  }
+
+  .body-subtitle {
+    font-size: 10vw;
+  }
+
+  .body-data {
+    width: 80%;
+    font-size: 5vw;
+    margin-top: 0px;
+  }
+
+  .abt-scroll {
+    padding-top: 2vh;
+    height: 55vh;
+  }
+}
+
+/* for mobilea */
+@media screen and (max-width: 499px) {
+  .body-image {
+    top: 0;
+    width: 180vw;
+    margin-right: -45vw;
+  }
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes letter-space {
+  from {
+    letter-spacing: 2vw;
+  }
+  to {
+    letter-spacing: 0vw;
+  }
+}
+
+@keyframes grayscale {
+  from {
+    filter: grayscale(0%);
+  }
+  to {
+    filter: grayscale(100%);
+  }
+}
