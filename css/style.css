@@ -7,6 +7,7 @@ body {
   overflow-x: hidden;
   animation-name: fade-in;
   animation-duration: 1s;
+  overflow : hidden;
 }
 
 button,
